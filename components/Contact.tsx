@@ -16,11 +16,11 @@ export default function Contact() {
             <div className="mt-8 space-y-4 text-sm text-slate-200">
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-cyan-300" />
-                <span>your@email.com</span>
+                <span>ulyssesjimboy.poo@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-cyan-300" />
-                <span>+63 000 000 0000</span>
+                <span>+63 926 535 6021</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={18} className="text-cyan-300" />

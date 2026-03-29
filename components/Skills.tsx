@@ -15,7 +15,8 @@ const skills = [
   "Wireframing",
   "Prototyping",
   "Git",
-  "User Experience"
+  "User Experience",
+  "Visily"
 ];
 
 export default function Skills() {
