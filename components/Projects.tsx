@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import Reveal from "./Reveal";
-
+import Image from "next/image";
 
 const projects = [
   {
@@ -11,6 +11,7 @@ const projects = [
     description:
       "Developed a fully responsive personal portfolio showcasing frontend and UI/UX skills with modern design principles and smooth interactions.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    image: "/projects/portfolio.png",
     live: "https://ulysses-portfolio.vercel.app",
     github: "https://github.com/ulyssesjimboypoo-sketch/ulysses-portfolio"
   }
@@ -37,7 +38,14 @@ export default function Projects() {
             whileHover={{ y: -8 }}
             className="glass rounded-[1.75rem] p-5 shadow-soft"
           >
-            <div className="h-44 rounded-[1.25rem] bg-gradient-to-br from-cyan-400/15 via-fuchsia-400/10 to-indigo-400/15" />
+            <div className="relative h-44 w-full overflow-hidden rounded-[1.25rem]">
+  <Image
+    src={project.image}
+    alt={project.title}
+    fill
+    className="object-cover"
+  />
+</div>
             <h3 className="mt-5 text-xl font-semibold text-white">{project.title}</h3>
             <p className="mt-3 text-sm leading-7 text-slate-300">{project.description}</p>
 
@@ -50,15 +58,6 @@ export default function Projects() {
                   {item}
                 </span>
               ))}
-            </div>
-
-            <div className="mt-6 flex gap-5 text-sm text-slate-200">
-              <a href="#" className="inline-flex items-center gap-2 transition hover:text-cyan-300">
-                Live <ExternalLink size={16} />
-              </a>
-              <a href="#" className="inline-flex items-center gap-2 transition hover:text-cyan-300">
-                Code <Github size={16} />
-              </a>
             </div>
           </motion.article>
         ))}
