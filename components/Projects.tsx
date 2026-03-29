@@ -4,21 +4,15 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import Reveal from "./Reveal";
 
+
 const projects = [
   {
-    title: "Aesthetic Portfolio Website",
-    description: "A modern personal portfolio with dark UI, smooth animation, and responsive layout.",
-    stack: ["Next.js", "Tailwind", "Framer Motion"]
-  },
-  {
-    title: "Restaurant Kiosk Interface",
-    description: "A self-service ordering UI focused on usability, speed, and touch-friendly interaction.",
-    stack: ["React", "UI/UX", "Responsive Design"]
-  },
-  {
-    title: "Creative Landing Page",
-    description: "A visually polished landing page with strong branding, animations, and conversion-focused sections.",
-    stack: ["Frontend", "Figma", "Tailwind CSS"]
+    title: "Personal Portfolio Website",
+    description:
+      "Developed a fully responsive personal portfolio showcasing frontend and UI/UX skills with modern design principles and smooth interactions.",
+    stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    live: "https://ulysses-portfolio.vercel.app",
+    github: "https://github.com/ulyssesjimboypoo-sketch/ulysses-portfolio"
   }
 ];
 
