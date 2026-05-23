@@ -12,9 +12,10 @@ const projects = [
       "Developed a fully responsive personal portfolio showcasing frontend and UI/UX skills with modern design principles and smooth interactions.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     image: "/projects/portfolio.png",
-    live: "https://ulysses-portfolio-neon.vercel.app/",
+    live: "https://ulysses-portfolio.vercel.app",
     github: "https://github.com/ulyssesjimboypoo-sketch/ulysses-portfolio",
   },
+
   {
     title: "JJ Weddings",
     description:
