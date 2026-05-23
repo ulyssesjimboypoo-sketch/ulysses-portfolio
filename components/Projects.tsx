@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 import Reveal from "./Reveal";
 import Image from "next/image";
 
@@ -11,19 +12,9 @@ const projects = [
       "Developed a fully responsive personal portfolio showcasing frontend and UI/UX skills with modern design principles and smooth interactions.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     image: "/projects/portfolio.png",
-    github:
-      "https://github.com/ulyssesjimboypoo-sketch/ulysses-portfolio",
-  },
-  {
-    title: "JJ Weddings",
-    description:
-      "The platform features a clean and responsive user interface built using React JS, Tailwind CSS, and Vite, providing smooth navigation, modern animations, and a premium visual aesthetic.",
-    stack: ["JavaScript", "HTML", "CSS"],
-    image: "/projects/jjproject.jpg",
-    live: "https://jimproject.vercel.app/",
-    github:
-      "https://github.com/ulyssesjimboypoo-sketch/velvet-vows",
-  },
+    live: "https://ulysses-portfolio.vercel.app",
+    github: "https://github.com/ulyssesjimboypoo-sketch/ulysses-portfolio"
+  }
 ];
 
 export default function Projects() {
@@ -31,10 +22,8 @@ export default function Projects() {
     <section id="projects" className="container-width py-16">
       <Reveal>
         <h2 className="section-title">Featured Projects</h2>
-
         <p className="section-copy">
-          Sample projects showcasing my approach to clean UI, strong visual
-          hierarchy, and smooth user experience.
+          Sample projects showcasing my approach to clean UI, strong visual hierarchy, and smooth user experience.
         </p>
       </Reveal>
 
@@ -50,26 +39,15 @@ export default function Projects() {
             className="glass rounded-[1.75rem] p-5 shadow-soft"
           >
             <div className="relative h-44 w-full overflow-hidden rounded-[1.25rem]">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-block text-xl font-semibold text-white hover:text-cyan-300 transition"
-            >
-              {project.title}
-            </a>
-
-            <p className="mt-3 text-sm leading-7 text-slate-300">
-              {project.description}
-            </p>
+  <Image
+    src={project.image}
+    alt={project.title}
+    fill
+    className="object-cover"
+  />
+</div>
+            <h3 className="mt-5 text-xl font-semibold text-white">{project.title}</h3>
+            <p className="mt-3 text-sm leading-7 text-slate-300">{project.description}</p>
 
             <div className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((item) => (
@@ -80,26 +58,6 @@ export default function Projects() {
                   {item}
                 </span>
               ))}
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg bg-cyan-400 px-4 py-2 text-sm font-medium text-black transition hover:scale-105"
-              >
-                Live Demo
-              </a>
-
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10"
-              >
-                GitHub
-              </a>
             </div>
           </motion.article>
         ))}
