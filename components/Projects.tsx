@@ -12,9 +12,18 @@ const projects = [
       "Developed a fully responsive personal portfolio showcasing frontend and UI/UX skills with modern design principles and smooth interactions.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     image: "/projects/portfolio.png",
-    live: "https://ulysses-portfolio.vercel.app",
-    github: "https://github.com/ulyssesjimboypoo-sketch/ulysses-portfolio"
-  }
+    live: "https://ulysses-portfolio-neon.vercel.app/",
+    github: "https://github.com/ulyssesjimboypoo-sketch/ulysses-portfolio",
+  },
+  {
+    title: "JJ Weddings",
+    description:
+      "The platform features a clean and responsive user interface built using React JS, Tailwind CSS, and Vite, providing smooth navigation, modern animations, and a premium visual aesthetic.",
+    stack: ["JavaScript", "HTML", "CSS"],
+    image: "/projects/jjproject.jpg",
+    live: "https://jimproject.vercel.app/",
+    github: "https://github.com/ulyssesjimboypoo-sketch/velvet-vows",
+  },
 ];
 
 export default function Projects() {
@@ -22,8 +31,10 @@ export default function Projects() {
     <section id="projects" className="container-width py-16">
       <Reveal>
         <h2 className="section-title">Featured Projects</h2>
+
         <p className="section-copy">
-          Sample projects showcasing my approach to clean UI, strong visual hierarchy, and smooth user experience.
+          Sample projects showcasing my approach to clean UI,
+          strong visual hierarchy, and smooth user experience.
         </p>
       </Reveal>
 
@@ -38,17 +49,32 @@ export default function Projects() {
             whileHover={{ y: -8 }}
             className="glass rounded-[1.75rem] p-5 shadow-soft"
           >
-            <div className="relative h-44 w-full overflow-hidden rounded-[1.25rem]">
-  <Image
-    src={project.image}
-    alt={project.title}
-    fill
-    className="object-cover"
-  />
-</div>
-            <h3 className="mt-5 text-xl font-semibold text-white">{project.title}</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-300">{project.description}</p>
+            {/* CLICKABLE IMAGE */}
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative h-44 w-full overflow-hidden rounded-[1.25rem]"
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition duration-300 hover:scale-105"
+              />
+            </a>
 
+            {/* TITLE */}
+            <h3 className="mt-5 text-xl font-semibold text-white">
+              {project.title}
+            </h3>
+
+            {/* DESCRIPTION */}
+            <p className="mt-3 text-sm leading-7 text-slate-300">
+              {project.description}
+            </p>
+
+            {/* STACK */}
             <div className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((item) => (
                 <span
@@ -58,6 +84,29 @@ export default function Projects() {
                   {item}
                 </span>
               ))}
+            </div>
+
+            {/* BUTTONS */}
+            <div className="mt-6 flex items-center gap-4">
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full bg-cyan-400 px-4 py-2 text-sm font-medium text-black transition hover:scale-105"
+              >
+                <ExternalLink size={16} />
+                Live Demo
+              </a>
+
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm text-white transition hover:bg-white/10"
+              >
+                <Github size={16} />
+                GitHub
+              </a>
             </div>
           </motion.article>
         ))}
