@@ -25,7 +25,48 @@ const projects = [
     live: "https://jimproject.vercel.app/",
     github: "https://github.com/ulyssesjimboypoo-sketch/velvet-vows",
   },
+
+    {
+    title: "School Portal",
+    stack: ["JavaScript", "HTML", "CSS"],
+    image: "/projects/SIC.jpg",
+    live: "https://sicwebsite-halndbm3v-ulyssesjimboypoo-sketchs-projects.vercel.app/",
+    github: "https://github.com/ulyssesjimboypoo-sketch/SICWEBSITE",
+  },
+
+    {
+    title: "Travels and Tours",
+    description:
+      "A modern and professional travel booking platform designed for travel and tours businesses.",
+    stack: ["JavaScript", "HTML", "CSS"],
+    image: "/projects/travels.jpg",
+    live: "https://travel-booking-demo-1mb8pv556-ulyssesjimboypoo-sketchs-projects.vercel.app/",
+    github: "https://github.com/ulyssesjimboypoo-sketch/travel-booking-demo",
+  },
+
+    {
+    title: "Nature",
+    description:
+      "A modern and professional travel booking platform designed for travel and tours businesses.",
+    stack: ["JavaScript", "HTML", ],
+    image: "/projects/nature.jpg",
+    live: "https://nature-resort-demo.vercel.app/",
+    github: "https://github.com/ulyssesjimboypoo-sketch/Nature",
+  },
+
+  {
+    title: "Cafe Mobile App",
+    description:
+      " Once a customer places and pays for an order, it automatically reflects in the Admin Dashboard in real-time so the shop owner can instantly see and manage incoming orders.",
+    stack: ["JavaScript"],
+    image: "/projects/cafe.jpg",
+    github: "https://github.com/ulyssesjimboypoo-sketch/Cafe-System",
+  },
+
+
 ];
+
+
 
 export default function Projects() {
   return (
