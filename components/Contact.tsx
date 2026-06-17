@@ -16,7 +16,7 @@ export default function Contact() {
             <div className="mt-8 space-y-4 text-sm text-slate-200">
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-cyan-300" />
-                <span>ulyssesjimboy.poo@gmail.com</span>
+                <span>poulyssesjimboy@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-cyan-300" />
