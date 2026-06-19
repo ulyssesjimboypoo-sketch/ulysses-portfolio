@@ -32,7 +32,7 @@ const projects = [
       "A modern and responsive school portal designed to showcase academic information, announcements, and school services.",
     stack: ["JavaScript", "HTML", "CSS"],
     image: "/projects/SIC.jpg",
-    live: "https://sicwebsite-halndbm3v-ulyssesjimboypoo-sketchs-projects.vercel.app/",
+    live: "https://sicwebsite-three.vercel.app/",
     github: "https://github.com/ulyssesjimboypoo-sketch/SICWEBSITE",
   },
 
